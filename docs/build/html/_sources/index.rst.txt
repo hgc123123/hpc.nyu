@@ -15,6 +15,7 @@ HPC documentation
    Login
    api
    mymarkdown
+   app/index
 
 Indices and tables
 ==================
