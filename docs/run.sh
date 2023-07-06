@@ -23,7 +23,7 @@ do
     sed -i 's| | |g' $line 
 done < $file1
 
-
+rm -rf delete
 
 git add .
 git commit -m "ad"
