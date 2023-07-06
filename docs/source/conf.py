@@ -22,7 +22,7 @@ copyright = 'NYU@Shanghai'
 author = 'nyushanghai'
 
 # The full version, including alpha/beta/rc tags
-release = 'v1'
+release = ''
 
 
 # -- General configuration ---------------------------------------------------
