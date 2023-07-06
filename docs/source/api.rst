@@ -1,5 +1,0 @@
-api
-=====
-
-.. automodule:: utils.foo
-    :members:
