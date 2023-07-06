@@ -12,7 +12,6 @@ HPC documentation
    
    Introduction
    Login
-
 .. toctree::
    :maxdepth: 2
 
