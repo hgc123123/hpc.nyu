@@ -15,7 +15,6 @@ HPC documentation
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
 
    app/index
 
