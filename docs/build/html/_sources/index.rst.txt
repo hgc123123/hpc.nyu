@@ -12,8 +12,6 @@ HPC documentation
    
    Introduction
    Login
-   api
-   mymarkdown
 
 .. toctree::
    :maxdepth: 2
