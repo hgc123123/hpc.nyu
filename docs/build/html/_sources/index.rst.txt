@@ -12,10 +12,8 @@ HPC documentation
    
    Introduction
    Login
-
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
    app/index
 
 Indices and tables
