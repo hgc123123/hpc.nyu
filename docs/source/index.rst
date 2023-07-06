@@ -11,6 +11,7 @@ HPC documentation
    :caption: Contents:
    
    Introduction
+   Login
    api
    mymarkdown
 
