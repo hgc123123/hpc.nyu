@@ -11,6 +11,7 @@ Welcome to hpc's documentation!
    :caption: Contents:
 
    api
+   mymarkdown
 
 Indices and tables
 ==================
