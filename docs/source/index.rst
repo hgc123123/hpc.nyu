@@ -14,9 +14,3 @@ HPC documentation
    Login
    app/index
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
