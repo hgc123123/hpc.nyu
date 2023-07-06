@@ -17,12 +17,12 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'hpc'
-copyright = '2023, hu'
-author = 'hu'
+project = 'HPC'
+copyright = 'NYU@Shanghai'
+author = 'nyushanghai'
 
 # The full version, including alpha/beta/rc tags
-release = 'v2'
+release = 'v1'
 
 
 # -- General configuration ---------------------------------------------------
