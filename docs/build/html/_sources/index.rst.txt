@@ -15,6 +15,11 @@ HPC documentation
    Login
    api
    mymarkdown
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
    app/index
 
 Indices and tables
