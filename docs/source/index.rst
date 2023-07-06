@@ -15,6 +15,7 @@ HPC documentation
 
 .. toctree::
    :maxdepth: 2
+
    app/index
 
 Indices and tables
