@@ -1,10 +1,9 @@
-./build/html/Introduction.html
-./build/html/Login.html
 ./build/html/app/ai/index.html
 ./build/html/app/ai/pytorch.html
 ./build/html/app/ai/tensorflow.html
 ./build/html/app/index.html
-./build/html/index.html
 ./build/html/genindex.html
+./build/html/index.html
+./build/html/Introduction.html
+./build/html/Login.html
 ./build/html/search.html
-./run.sh

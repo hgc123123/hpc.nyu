@@ -3,7 +3,7 @@
 
 make clean
 make html
-grep -rn "Theme by" ./ > delete
+grep -rn "Theme by" ./build/html/* > delete
 
 
 rm -rf file1
@@ -20,10 +20,9 @@ file1="file1"
 
 while read -r line
 do
-    sed -i 's| | |g' $line 
+    sed -i 's|Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>| |g' $line 
 done < $file1
 
-rm -rf delete
 
 git add .
 git commit -m "ad"
