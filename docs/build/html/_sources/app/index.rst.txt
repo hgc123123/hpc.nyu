@@ -1,3 +1,7 @@
+***
+app
+***
+
 .. toctree::
    :hidden:
 
