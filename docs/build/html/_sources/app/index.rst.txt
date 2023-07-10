@@ -2,6 +2,8 @@
 APP
 ***
 
+You can search application firstly by :doc:`module`.
+
 Science Computing softwares
 
 - :ref:`second-table`
