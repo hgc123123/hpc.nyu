@@ -1,5 +1,5 @@
 ***
-ai
+AI
 ***
 
 .. toctree::
