@@ -8,7 +8,7 @@ Basic commands
 ==============
 
 +----------+------------------------------------------------------------------------------+
-| Command  |                                   Role                                       |
+| Command  |                      Description                                             |
 +==========+==============================================================================+
 | sbatch   | submit a job script for later execution                                      |
 +----------+------------------------------------------------------------------------------+
@@ -28,7 +28,7 @@ Basic commands
 squeue
 -------
 
-.. csv-table:: Frozen Delights!
+.. csv-table::
    :header: "Command", "Description"
    :widths: 15, 30
 
