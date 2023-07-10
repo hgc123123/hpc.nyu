@@ -50,26 +50,6 @@ xxxxx
 GPU
 ---
 
-gpu.py
-^^^^^^^
-
-.. code:: bash
-
-   import cudf
-   import cugraph
-
-   # Load edge list from a CSV file
-   edge_list = cudf.read_csv('tmp.csv')
-
-   # Create a Graph
-   G = cugraph.Graph()
-   G.from_cudf_edgelist(edge_list, source=0, target=1, edge_attr=2) 
-
-   # Calculate betweenness centrality
-   betweenness_centrality = cugraph.betweenness_centrality(G)
-
-   print(betweenness_centrality) 
-
 gpu.slurm
 ^^^^^^^^^^
 
@@ -88,8 +68,35 @@ gpu.slurm
    module load singularity/3.11.3   rapids/0.19
    python3 gpu.py
 
+gpu.py
+^^^^^^^
+
+.. code:: bash
+
+   import cudf
+   import cugraph
+
+   # Load edge list from a CSV file
+   edge_list = cudf.read_csv('tmp.csv')
+
+   # Create a Graph
+   G = cugraph.Graph()
+   G.from_cudf_edgelist(edge_list, source=0, target=1, edge_attr=2)
+
+   # Calculate betweenness centrality
+   betweenness_centrality = cugraph.betweenness_centrality(G)
+
+   print(betweenness_centrality)
+
+Submit GPU job
+^^^^^^^^^^^^^^^
+
+.. code:: bash
+
+   sbatch gpu.slurm
+
 Result
-------
+======
 
 xxxx
 

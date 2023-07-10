@@ -256,23 +256,28 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gpu-slurm">
+       gpu.slurm
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#gpu-py">
        gpu.py
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#gpu-slurm">
-       gpu.slurm
+      <a class="reference internal nav-link" href="#submit-gpu-job">
+       Submit GPU job
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#result">
-     Result
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#result">
+   Result
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rapids-references">
@@ -332,23 +337,28 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gpu-slurm">
+       gpu.slurm
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#gpu-py">
        gpu.py
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#gpu-slurm">
-       gpu.slurm
+      <a class="reference internal nav-link" href="#submit-gpu-job">
+       Submit GPU job
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#result">
-     Result
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#result">
+   Result
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rapids-references">
@@ -423,6 +433,23 @@ Built on state-of-the-art foundations like NVIDIA CUDA and Apache Arrow, it unlo
 </div>
 <div class="section" id="gpu">
 <h3>GPU<a class="headerlink" href="#gpu" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="gpu-slurm">
+<h4>gpu.slurm<a class="headerlink" href="#gpu-slurm" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=gpu_cudf_cugraph</span>
+<span class="c1">#SBATCH --partition=gpu</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --gres=gpu:1</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+module<span class="w"> </span>load<span class="w"> </span>singularity/3.11.3<span class="w">   </span>rapids/0.19
+python3<span class="w"> </span>gpu.py
+</pre></div>
+</div>
+</div>
 <div class="section" id="gpu-py">
 <h4>gpu.py<a class="headerlink" href="#gpu-py" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>import<span class="w"> </span>cudf
@@ -442,28 +469,17 @@ print<span class="o">(</span>betweenness_centrality<span class="o">)</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="gpu-slurm">
-<h4>gpu.slurm<a class="headerlink" href="#gpu-slurm" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-
-<span class="c1">#SBATCH --job-name=gpu_cudf_cugraph</span>
-<span class="c1">#SBATCH --partition=gpu</span>
-<span class="c1">#SBATCH -N 1</span>
-<span class="c1">#SBATCH --ntasks-per-node=1</span>
-<span class="c1">#SBATCH --gres=gpu:1</span>
-<span class="c1">#SBATCH --output=%j.out</span>
-<span class="c1">#SBATCH --error=%j.err</span>
-
-module<span class="w"> </span>load<span class="w"> </span>singularity/3.11.3<span class="w">   </span>rapids/0.19
-python3<span class="w"> </span>gpu.py
+<div class="section" id="submit-gpu-job">
+<h4>Submit GPU job<a class="headerlink" href="#submit-gpu-job" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>gpu.slurm
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="result">
-<h3>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h3>
-<p>xxxx</p>
 </div>
+<div class="section" id="result">
+<h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
+<p>xxxx</p>
 </div>
 <div class="section" id="rapids-references">
 <h2>RAPIDS References<a class="headerlink" href="#rapids-references" title="Permalink to this headline">¶</a></h2>
