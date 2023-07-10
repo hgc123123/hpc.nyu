@@ -61,4 +61,4 @@ How to run jobs
 Sbatch
 -------
 
-
+Sbatch submits a batch script to Slurm. The batch script can be given to sbatch through a file name on the command line. The batch script may contain options preceded with "#SBATCH" before any executable commands in the script. sbatch will stop processing further #SBATCH directives once the first non-comment non-whitespace line has been reached in the script.
