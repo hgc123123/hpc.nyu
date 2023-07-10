@@ -5,6 +5,7 @@ There are two clusters:
 
 
 .. image:: ./img/cluster.png
+    :align: center
 
 Login to old one
 -------------------
