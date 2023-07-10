@@ -79,16 +79,18 @@ gpu.py
    import cugraph
 
    # Load edge list from a CSV file
-   edge_list = cudf.read_csv('tmp.csv')
+   edge_list = cudf.read_csv('tmp.csv', header=None)
+   edge_list.columns = ['source', 'destination', 'weight']
 
    # Create a Graph
    G = cugraph.Graph()
-   G.from_cudf_edgelist(edge_list, source=0, target=1, edge_attr=2)
+   G.from_cudf_edgelist(edge_list, source='source', destination='destination', edge_attr='weight')
 
    # Calculate betweenness centrality
    betweenness_centrality = cugraph.betweenness_centrality(G)
 
-   print(betweenness_centrality)
+   #print(betweenness_centrality)
+   betweenness_centrality.to_csv('betweenness_centrality.csv', index=False) 
 
 Submit GPU job
 ^^^^^^^^^^^^^^^
@@ -100,14 +102,15 @@ Submit GPU job
 Result
 ======
 
-xxxx
+.. csv-table::
+   :header: "Enviroment", "Time"
+   :widths: 3,10
 
+   "CPU","xx:xx:xx"
+   "GPU","00:11:34"
 
 RAPIDS References
 =================
 
 `RAPIDS Website <https://rapids.ai/>`_
-
-
-
 
