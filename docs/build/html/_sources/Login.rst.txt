@@ -11,7 +11,7 @@ Login to old one
 Login to new one
 ------------------
 
-.. code-block: RST
+.. code-block:: RST
 
     ssh netid@hpclogin.shanghai.nyu.edu
 
