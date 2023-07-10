@@ -18,7 +18,7 @@ Low level compute primitives with RAFT
 Apache Spark acceleration with Spark RAPIDS
 
 .. hlist::
-   :columns: 3
+   :columns: 1
 
    * 列表
    * 的子
