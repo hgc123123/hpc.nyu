@@ -218,8 +218,43 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-avail">
+     module avail
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-spider">
+     module spider
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-help">
+     module help
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-load">
+     module load
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#module-list">
      module list
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-show">
+     module show
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-unload">
+     module unload
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-purge">
+     module purge
     </a>
    </li>
   </ul>
@@ -255,8 +290,43 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-avail">
+     module avail
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-spider">
+     module spider
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-help">
+     module help
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-load">
+     module load
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#module-list">
      module list
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-show">
+     module show
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-unload">
+     module unload
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#module-purge">
+     module purge
     </a>
    </li>
   </ul>
@@ -324,8 +394,8 @@ different applications.</p>
 </div>
 <div class="section" id="using-common-commands">
 <h2>Using Common Commands<a class="headerlink" href="#using-common-commands" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="module-list">
-<h3>module list<a class="headerlink" href="#module-list" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="module-avail">
+<h3>module avail<a class="headerlink" href="#module-avail" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>avail
 
 -------------------------------------------------------------------------------------<span class="w"> </span>/gpfs/spack/modulefiles<span class="w"> </span>--------------------------------------------------------------------------------------
@@ -335,6 +405,105 @@ different applications.</p>
 <span class="w">   </span>cmake/3.26.3-gcc-8.5.0<span class="w"> </span><span class="o">(</span>D<span class="o">)</span><span class="w">    </span>intel-oneapi-compilers/2023.1.0<span class="w">    </span>intel-tbb/2021.9.0<span class="w">               </span>openmpi/main-gcc-13.1.0
 <span class="w">   </span>gcc/12.1.0<span class="w">                    </span>intel-oneapi-mkl/2023.1.0<span class="w">          </span>miniconda3/22.11.1<span class="w">               </span>osu-micro-benchmarks/7.1-1-gcc-13.1.0
 <span class="w">   </span>gcc/13.1.0<span class="w">             </span><span class="o">(</span>D<span class="o">)</span><span class="w">    </span>intel-oneapi-mpi/2021.9.0<span class="w">          </span>openblas/0.3.23-gcc-8.5.0<span class="w"> </span><span class="o">(</span>D<span class="o">)</span><span class="w">    </span>osu-micro-benchmarks/7.1-1-oneapi-2023.1.0<span class="w"> </span><span class="o">(</span>D<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-spider">
+<h3>module spider<a class="headerlink" href="#module-spider" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>spider<span class="w"> </span>openmpi
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<span class="w">  </span>openmpi:<span class="w"> </span>openmpi/main-gcc-13.1.0
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-help">
+<h3>module help<a class="headerlink" href="#module-help" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span><span class="nb">help</span><span class="w"> </span>openmpi
+
+-------------------------------------------------------------------------<span class="w"> </span>Module<span class="w"> </span>Specific<span class="w"> </span>Help<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s2">&quot;openmpi/main-gcc-13.1.0&quot;</span><span class="w"> </span>--------------------------------------------------------------------------
+Name<span class="w">   </span>:<span class="w"> </span>openmpi
+Version:<span class="w"> </span>main
+Target<span class="w"> </span>:<span class="w"> </span>icelake
+
+An<span class="w"> </span>open<span class="w"> </span><span class="nb">source</span><span class="w"> </span>Message<span class="w"> </span>Passing<span class="w"> </span>Interface<span class="w"> </span>implementation.
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-load">
+<h3>module load<a class="headerlink" href="#module-load" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>openmpi/main-gcc-13.1.0
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-list">
+<h3>module list<a class="headerlink" href="#module-list" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>list
+
+Currently<span class="w"> </span>Loaded<span class="w"> </span>Modules:
+<span class="w">  </span><span class="m">1</span><span class="o">)</span><span class="w"> </span>openmpi/main-gcc-13.1.0
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-show">
+<h3>module show<a class="headerlink" href="#module-show" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>show<span class="w"> </span>openmpi/main-gcc-13.1.0
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<span class="w">   </span>/gpfs/spack/share/spack/modules/linux-rhel8-icelake/openmpi/main-gcc-13.1.0:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+whatis<span class="o">(</span><span class="s2">&quot;An open source Message Passing Interface implementation.&quot;</span><span class="o">)</span>
+conflict<span class="o">(</span><span class="s2">&quot;openmpi&quot;</span><span class="o">)</span>
+prepend_path<span class="o">(</span><span class="s2">&quot;PATH&quot;</span>,<span class="s2">&quot;/gpfs/spack/opt/spack/linux-rhel8-icelake/gcc-13.1.0/openmpi-main-w5kotu7gsrwulvqzwdlbsemmxwwvvy3i/bin&quot;</span><span class="o">)</span>
+prepend_path<span class="o">(</span><span class="s2">&quot;PKG_CONFIG_PATH&quot;</span>,<span class="s2">&quot;/gpfs/spack/opt/spack/linux-rhel8-icelake/gcc-13.1.0/openmpi-main-w5kotu7gsrwulvqzwdlbsemmxwwvvy3i/lib/pkgconfig&quot;</span><span class="o">)</span>
+prepend_path<span class="o">(</span><span class="s2">&quot;CMAKE_PREFIX_PATH&quot;</span>,<span class="s2">&quot;/gpfs/spack/opt/spack/linux-rhel8-icelake/gcc-13.1.0/openmpi-main-w5kotu7gsrwulvqzwdlbsemmxwwvvy3i/.&quot;</span><span class="o">)</span>
+setenv<span class="o">(</span><span class="s2">&quot;MPICC&quot;</span>,<span class="s2">&quot;/gpfs/spack/opt/spack/linux-rhel8-icelake/gcc-13.1.0/openmpi-main-w5kotu7gsrwulvqzwdlbsemmxwwvvy3i/bin/mpicc&quot;</span><span class="o">)</span>
+setenv<span class="o">(</span><span class="s2">&quot;MPICXX&quot;</span>,<span class="s2">&quot;/gpfs/spack/opt/spack/linux-rhel8-icelake/gcc-13.1.0/openmpi-main-w5kotu7gsrwulvqzwdlbsemmxwwvvy3i/bin/mpic++&quot;</span><span class="o">)</span>
+setenv<span class="o">(</span><span class="s2">&quot;MPIF77&quot;</span>,<span class="s2">&quot;/gpfs/spack/opt/spack/linux-rhel8-icelake/gcc-13.1.0/openmpi-main-w5kotu7gsrwulvqzwdlbsemmxwwvvy3i/bin/mpif77&quot;</span><span class="o">)</span>
+setenv<span class="o">(</span><span class="s2">&quot;MPIF90&quot;</span>,<span class="s2">&quot;/gpfs/spack/opt/spack/linux-rhel8-icelake/gcc-13.1.0/openmpi-main-w5kotu7gsrwulvqzwdlbsemmxwwvvy3i/bin/mpif90&quot;</span><span class="o">)</span>
+setenv<span class="o">(</span><span class="s2">&quot;OPENMPI_ROOT&quot;</span>,<span class="s2">&quot;/gpfs/spack/opt/spack/linux-rhel8-icelake/gcc-13.1.0/openmpi-main-w5kotu7gsrwulvqzwdlbsemmxwwvvy3i&quot;</span><span class="o">)</span>
+help<span class="o">([[</span>Name<span class="w">   </span>:<span class="w"> </span>openmpi
+Version:<span class="w"> </span>main
+Target<span class="w"> </span>:<span class="w"> </span>icelake
+
+An<span class="w"> </span>open<span class="w"> </span><span class="nb">source</span><span class="w"> </span>Message<span class="w"> </span>Passing<span class="w"> </span>Interface<span class="w"> </span>implementation.<span class="w"> </span>The<span class="w"> </span>Open<span class="w"> </span>MPI
+Project<span class="w"> </span>is<span class="w"> </span>an<span class="w"> </span>open<span class="w"> </span><span class="nb">source</span><span class="w"> </span>Message<span class="w"> </span>Passing<span class="w"> </span>Interface<span class="w"> </span>implementation<span class="w"> </span>that
+is<span class="w"> </span>developed<span class="w"> </span>and<span class="w"> </span>maintained<span class="w"> </span>by<span class="w"> </span>a<span class="w"> </span>consortium<span class="w"> </span>of<span class="w"> </span>academic,<span class="w"> </span>research,<span class="w"> </span>and
+industry<span class="w"> </span>partners.<span class="w"> </span>Open<span class="w"> </span>MPI<span class="w"> </span>is<span class="w"> </span>therefore<span class="w"> </span>able<span class="w"> </span>to<span class="w"> </span>combine<span class="w"> </span>the<span class="w"> </span>expertise,
+technologies,<span class="w"> </span>and<span class="w"> </span>resources<span class="w"> </span>from<span class="w"> </span>all<span class="w"> </span>across<span class="w"> </span>the<span class="w"> </span>High<span class="w"> </span>Performance
+Computing<span class="w"> </span>community<span class="w"> </span><span class="k">in</span><span class="w"> </span>order<span class="w"> </span>to<span class="w"> </span>build<span class="w"> </span>the<span class="w"> </span>best<span class="w"> </span>MPI<span class="w"> </span>library<span class="w"> </span>available.
+Open<span class="w"> </span>MPI<span class="w"> </span>offers<span class="w"> </span>advantages<span class="w"> </span><span class="k">for</span><span class="w"> </span>system<span class="w"> </span>and<span class="w"> </span>software<span class="w"> </span>vendors,<span class="w"> </span>application
+developers<span class="w"> </span>and<span class="w"> </span>computer<span class="w"> </span>science<span class="w"> </span>researchers.
+<span class="o">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-unload">
+<h3>module unload<a class="headerlink" href="#module-unload" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>openmpi
+<span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>list
+
+Currently<span class="w"> </span>Loaded<span class="w"> </span>Modules:
+<span class="w">  </span><span class="m">1</span><span class="o">)</span><span class="w"> </span>openmpi/main-gcc-13.1.0
+
+<span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>unload<span class="w"> </span>openmpi/main-gcc-13.1.0
+<span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>list
+No<span class="w"> </span>modules<span class="w"> </span>loaded
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-purge">
+<h3>module purge<a class="headerlink" href="#module-purge" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>openmpi<span class="w"> </span>cmake
+<span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>list
+
+Currently<span class="w"> </span>Loaded<span class="w"> </span>Modules:
+<span class="w">  </span><span class="m">1</span><span class="o">)</span><span class="w"> </span>openmpi/main-gcc-13.1.0<span class="w">   </span><span class="m">2</span><span class="o">)</span><span class="w"> </span>cmake/3.26.3-gcc-8.5.0
+
+
+
+<span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>purge
+<span class="o">[</span>hpc@hpclogin<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>module<span class="w"> </span>list
+No<span class="w"> </span>modules<span class="w"> </span>loaded
 </pre></div>
 </div>
 </div>
