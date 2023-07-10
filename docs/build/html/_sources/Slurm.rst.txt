@@ -113,4 +113,4 @@ We hope that you can use sbatch to submit jobs, you just need to submit your job
 If you use srun to running job, when you terminal are closed, your job will be cancelled.
 
 
-`Slurm Website <http://zh-sphinx-doc.readthedocs.io/en/latest/markup/para.html>`_
+`Slurm Website <https://slurm.schedmd.com/documentation.html>`_
