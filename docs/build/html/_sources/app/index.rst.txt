@@ -36,3 +36,4 @@ Science Computing softwares
    :hidden:
 
    ai/index
+   module
