@@ -442,7 +442,7 @@ Built on state-of-the-art foundations like NVIDIA CUDA and Apache Arrow, it unlo
 <span class="c1">#SBATCH --job-name=gpu_cudf_cugraph</span>
 <span class="c1">#SBATCH --partition=gpu</span>
 <span class="c1">#SBATCH -N 1</span>
-<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --ntasks-per-node=4</span>
 <span class="c1">#SBATCH --gres=gpu:1</span>
 <span class="c1">#SBATCH --output=%j.out</span>
 <span class="c1">#SBATCH --error=%j.err</span>

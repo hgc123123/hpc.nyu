@@ -62,7 +62,7 @@ gpu.slurm
    #SBATCH --job-name=gpu_cudf_cugraph
    #SBATCH --partition=gpu
    #SBATCH -N 1
-   #SBATCH --ntasks-per-node=1
+   #SBATCH --ntasks-per-node=4
    #SBATCH --gres=gpu:1
    #SBATCH --output=%j.out
    #SBATCH --error=%j.err
