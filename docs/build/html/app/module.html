@@ -202,6 +202,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#common-commands">
+   Common Commands
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -214,6 +227,19 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#common-commands">
+   Common Commands
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -239,6 +265,46 @@ python, ruby, cmake and r.</p>
 <p>Modules are useful in managing different versions of applications. Modules
 can also be bundled into metamodules that will load an entire suite of
 different applications.</p>
+<div class="section" id="common-commands">
+<h2>Common Commands<a class="headerlink" href="#common-commands" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>module list</p></td>
+<td><p>List currently loaded modules.</p></td>
+</tr>
+<tr class="row-odd"><td><p>module avail</p></td>
+<td><p>List available packages.</p></td>
+</tr>
+<tr class="row-even"><td><p>module spider</p></td>
+<td><p>List available packages in a different format.</p></td>
+</tr>
+<tr class="row-odd"><td><p>module help [modulefile]</p></td>
+<td><p>Description of specified module.</p></td>
+</tr>
+<tr class="row-even"><td><p>module show [modulefile]</p></td>
+<td><p>Displays information about specified module, including environment changes, dependencies, software version and path.</p></td>
+</tr>
+<tr class="row-odd"><td><p>module load [modulefile]</p></td>
+<td><p>Loads module or specifies which dependencies have not been loaded.</p></td>
+</tr>
+<tr class="row-even"><td><p>module unload [modulefile]</p></td>
+<td><p>Unloads specified module from environment.</p></td>
+</tr>
+<tr class="row-odd"><td><p>module purge</p></td>
+<td><p>Unloads all loaded modules</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
