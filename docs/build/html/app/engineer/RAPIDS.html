@@ -228,6 +228,57 @@
    Modules
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-data-and-script">
+   Test Data And Script
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-in-cpu-vs-gpu">
+   Run in CPU vs GPU
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cpu">
+     CPU
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cpu-py">
+       cpu.py
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gpu">
+     GPU
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gpu-py">
+       gpu.py
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gpu-slurm">
+       gpu.slurm
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#result">
+     Result
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -251,6 +302,57 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#modules">
    Modules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-data-and-script">
+   Test Data And Script
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-in-cpu-vs-gpu">
+   Run in CPU vs GPU
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cpu">
+     CPU
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cpu-py">
+       cpu.py
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gpu">
+     GPU
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gpu-py">
+       gpu.py
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gpu-slurm">
+       gpu.slurm
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#result">
+     Result
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -298,11 +400,74 @@ Built on state-of-the-art foundations like NVIDIA CUDA and Apache Arrow, it unlo
 <tbody>
 <tr class="row-even"><td><p>0.19</p></td>
 <td><p>Singularity</p></td>
-<td><p>rapidsai/0.19</p></td>
+<td><p>rapids/0.19</p></td>
 <td><p>pudong(hpc.shanghai.nyu.edu)</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="test-data-and-script">
+<h2>Test Data And Script<a class="headerlink" href="#test-data-and-script" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Data:<span class="w">       </span>/gpfsnyuc7/packagec7/modules/rapids/tmp.csv
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-in-cpu-vs-gpu">
+<h2>Run in CPU vs GPU<a class="headerlink" href="#run-in-cpu-vs-gpu" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cpu">
+<h3>CPU<a class="headerlink" href="#cpu" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="cpu-py">
+<h4>cpu.py<a class="headerlink" href="#cpu-py" title="Permalink to this headline">¶</a></h4>
+<p>xxxxx</p>
+</div>
+</div>
+<div class="section" id="gpu">
+<h3>GPU<a class="headerlink" href="#gpu" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="gpu-py">
+<h4>gpu.py<a class="headerlink" href="#gpu-py" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>import<span class="w"> </span>cudf
+import<span class="w"> </span>cugraph
+
+<span class="c1"># Load edge list from a CSV file</span>
+<span class="nv">edge_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>cudf.read_csv<span class="o">(</span><span class="s1">&#39;tmp.csv&#39;</span><span class="o">)</span>
+
+<span class="c1"># Create a Graph</span>
+<span class="nv">G</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>cugraph.Graph<span class="o">()</span>
+G.from_cudf_edgelist<span class="o">(</span>edge_list,<span class="w"> </span><span class="nv">source</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">target</span><span class="o">=</span><span class="m">1</span>,<span class="w"> </span><span class="nv">edge_attr</span><span class="o">=</span><span class="m">2</span><span class="o">)</span>
+
+<span class="c1"># Calculate betweenness centrality</span>
+<span class="nv">betweenness_centrality</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>cugraph.betweenness_centrality<span class="o">(</span>G<span class="o">)</span>
+
+print<span class="o">(</span>betweenness_centrality<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gpu-slurm">
+<h4>gpu.slurm<a class="headerlink" href="#gpu-slurm" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=gpu_cudf_cugraph</span>
+<span class="c1">#SBATCH --partition=gpu</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --gres=gpu:1</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+module<span class="w"> </span>load<span class="w"> </span>singularity/3.11.3<span class="w">   </span>rapids/0.19
+python3<span class="w"> </span>gpu.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="result">
+<h3>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h3>
+<p>xxxx</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://rapids.ai/">RAPIDS Website</a></p>
 </div>
 </div>
 

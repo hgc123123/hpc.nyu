@@ -21,10 +21,84 @@ Utilizing NVIDIA CUDA primitives for low-level compute optimization, RAPIDS expo
    * Apache Spark acceleration with Spark RAPIDS
 
 Modules
---------
+=======
 
 .. csv-table::
    :header: "Version", "How to buid","Module","Cluster"
    :widths: 8,10,15,25
 
-   "0.19","Singularity","rapidsai/0.19","pudong(hpc.shanghai.nyu.edu)"
+   "0.19","Singularity","rapids/0.19","pudong(hpc.shanghai.nyu.edu)"
+
+Test Data And Script
+====================
+
+.. code:: bash
+
+   Data:       /gpfsnyuc7/packagec7/modules/rapids/tmp.csv
+
+Run in CPU vs GPU
+=================
+
+CPU
+----
+
+cpu.py
+^^^^^^^^
+
+xxxxx
+
+GPU
+---
+
+gpu.py
+^^^^^^^
+
+.. code:: bash
+
+   import cudf
+   import cugraph
+
+   # Load edge list from a CSV file
+   edge_list = cudf.read_csv('tmp.csv')
+
+   # Create a Graph
+   G = cugraph.Graph()
+   G.from_cudf_edgelist(edge_list, source=0, target=1, edge_attr=2) 
+
+   # Calculate betweenness centrality
+   betweenness_centrality = cugraph.betweenness_centrality(G)
+
+   print(betweenness_centrality) 
+
+gpu.slurm
+^^^^^^^^^^
+
+.. code:: bash
+
+   #!/bin/bash
+
+   #SBATCH --job-name=gpu_cudf_cugraph
+   #SBATCH --partition=gpu
+   #SBATCH -N 1
+   #SBATCH --ntasks-per-node=1
+   #SBATCH --gres=gpu:1
+   #SBATCH --output=%j.out
+   #SBATCH --error=%j.err
+   
+   module load singularity/3.11.3   rapids/0.19
+   python3 gpu.py
+
+Result
+------
+
+xxxx
+
+
+References
+==========
+
+`RAPIDS Website <https://rapids.ai/>`_
+
+
+
+
