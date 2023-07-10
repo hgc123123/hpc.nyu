@@ -2,7 +2,7 @@
 APP
 ***
 
-You can search application firstly by :doc:`module`.
+You can search needed application by :doc:`module`.
 
 Science Computing softwares
 
