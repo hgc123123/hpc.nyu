@@ -6,6 +6,11 @@ The Modules package is a tool that simplify shell initialization and
 lets users easily modify their environment during the session with
 modulefiles.
 
+Each modulefile contains the information needed to configure the shell for
+an application. Once the Modules package is initialized, the environment can
+be modified on a per-module basis using the module command which interprets
+modulefiles. 
+
 Modules can be loaded and unloaded dynamically and atomically, in an clean
 fashion. All popular shells are supported, including bash, ksh, zsh, sh,
 csh, tcsh, fish, as well as some scripting languages such as tcl, perl,
