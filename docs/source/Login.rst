@@ -1,12 +1,6 @@
 Login
 ============
 
-There are two clusters:
-
-
-.. image:: ./img/cluster.png
-    :align: center
-
 Login to old one
 -------------------
 
@@ -17,4 +11,7 @@ Login to old one
 Login to new one
 ------------------
 
-.. code-block
+.. code-block: RST
+
+    ssh netid@hpclogin.shanghai.nyu.edu
+
