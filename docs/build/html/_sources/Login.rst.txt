@@ -5,11 +5,6 @@ There are two clusters:
 
 
 .. image:: ./img/cluster.png
-   :height: 100px
-   :width: 200 px
-   :scale: 50 %
-   :alt: alternate text
-   :align: right
 
 Login to old one
 -------------------
