@@ -104,10 +104,10 @@ Result
 
 .. csv-table::
    :header: "Enviroment", "Time"
-   :widths: 3,10
+   :widths: 10,10
 
    "CPU","xx:xx:xx"
-   "GPU","00:11:34"
+   "GPU(1:P100)","00:11:34"
 
 RAPIDS References
 =================
