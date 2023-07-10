@@ -42,11 +42,21 @@ How to run jobs
 
 .. csv-table::
    :header: "Parameter", "Description"
-   :widths: 15, 30
+   :widths: 15, 50
 
-   "",""
-   "",""
-   "",""
+   "-n [count]","total processes"
+   "--ntasks-per-node=[count]","total processed per node"
+   "-p [partition]","partition name"
+   "--job-name=[name]","job name"
+   "--output=[file_name]","output result log"
+   "--error=[file_name]","ouput error log"
+   "--time=[dd-hh:mm:ss]","limited time of the job allocation"
+   "--mail-type=[type]","Notify user by email when certain event types occur"
+   "--mail-user=[mail_address]","User to receive email notification of state changes as defined by --mail-type"
+   "--nodelist=[nodes]","Request a specific list of hosts"
+   "--exclusive=[nodes]","The job allocation can not share nodes with other running jobs"
+   "--array=[array_spec]","Submit a job array, multiple jobs to be executed with identical parameters"
+   "--gres=gpu:numbers","Specifies a comma-delimited list of generic gpu resources"
 
 Sbatch
 -------
