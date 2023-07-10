@@ -94,8 +94,8 @@ Result
 xxxx
 
 
-References
-==========
+RAPIDS References
+=================
 
 `RAPIDS Website <https://rapids.ai/>`_
 
