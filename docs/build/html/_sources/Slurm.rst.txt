@@ -34,3 +34,21 @@ squeue
 
    "squeue -j jobid","print infomation about job jobid"
    "squeue -n HOST","print information about job running on HOST"
+
+How to run jobs
+===============
+
+**Frequented parameters**
+
+.. csv-table::
+   :header: "Parameter", "Description"
+   :widths: 15, 30
+
+   "",""
+   "",""
+   "",""
+
+Sbatch
+-------
+
+jiji
