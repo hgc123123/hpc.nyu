@@ -475,6 +475,10 @@ mpirun<span class="w"> </span>exec.file
 <div class="section" id="srun">
 <h3>Srun<a class="headerlink" href="#srun" title="Permalink to this headline">¶</a></h3>
 <p>Run a parallel job on cluster managed by Slurm. If necessary, srun will first create a resource allocation in which to run the parallel job.</p>
+<p><strong>Running example</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>srun<span class="w"> </span>--partition<span class="o">=</span>parallel<span class="w">  </span>--nodes<span class="o">=</span><span class="m">1</span><span class="w"> </span>--ntasks<span class="o">=</span><span class="m">6</span><span class="w"> </span>hostname
+</pre></div>
+</div>
 </div>
 </div>
 </div>

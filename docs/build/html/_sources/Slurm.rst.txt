@@ -100,4 +100,8 @@ Srun
 
 Run a parallel job on cluster managed by Slurm. If necessary, srun will first create a resource allocation in which to run the parallel job.
 
+**Running example**
 
+.. code:: bash
+
+   srun --partition=parallel  --nodes=1 --ntasks=6 hostname
