@@ -445,8 +445,8 @@
 
 <span class="c1">#SBATCH --job-name=run</span>
 <span class="c1">#SBATCH --partition=parallel</span>
-<span class="c1">#SBATCH -N 2</span>
-<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH -N 2                  #&#39;N&#39; repserents total nodes</span>
+<span class="c1">#SBATCH --ntasks-per-node=1   #represents total processes per node</span>
 <span class="c1">#SBATCH --output=%j.out</span>
 <span class="c1">#SBATCH --error=%j.err</span>
 

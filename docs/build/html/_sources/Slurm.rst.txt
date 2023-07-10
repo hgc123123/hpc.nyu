@@ -80,8 +80,8 @@ Sbatch submits a batch script to Slurm. The batch script can be given to sbatch 
 
    #SBATCH --job-name=run
    #SBATCH --partition=parallel
-   #SBATCH -N 2
-   #SBATCH --ntasks-per-node=1
+   #SBATCH -N 2                  #'N' repserents total nodes
+   #SBATCH --ntasks-per-node=1   #represents total processes per node
    #SBATCH --output=%j.out
    #SBATCH --error=%j.err
 
