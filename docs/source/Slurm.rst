@@ -79,9 +79,10 @@ Sbatch submits a batch script to Slurm. The batch script can be given to sbatch 
    #!/bin/bash
 
    #SBATCH --job-name=run
-   #SBATCH --partition=parallel
-   #SBATCH -N 2                  #'N' repserents total nodes
-   #SBATCH --ntasks-per-node=1   #represents total processes per node
+   #SBATCH --partition=gpu
+   #SBATCH -n 1                  #total nodes
+   #SBATCH --ntasks-per-node=1   #total processes per node
+   #SBATCH --gres=gpu:1          #total gpus
    #SBATCH --output=%j.out
    #SBATCH --error=%j.err
 
@@ -93,3 +94,10 @@ Sbatch submits a batch script to Slurm. The batch script can be given to sbatch 
 .. code:: bash
 
    sbatch run.slurm
+
+Srun
+-----
+
+Run a parallel job on cluster managed by Slurm. If necessary, srun will first create a resource allocation in which to run the parallel job.
+
+

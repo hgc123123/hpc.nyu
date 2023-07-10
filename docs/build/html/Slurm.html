@@ -241,6 +241,11 @@
      </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#srun">
+     Srun
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -301,6 +306,11 @@
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#srun">
+     Srun
+    </a>
    </li>
   </ul>
  </li>
@@ -444,9 +454,10 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1">#SBATCH --job-name=run</span>
-<span class="c1">#SBATCH --partition=parallel</span>
-<span class="c1">#SBATCH -N 2                  #&#39;N&#39; repserents total nodes</span>
-<span class="c1">#SBATCH --ntasks-per-node=1   #represents total processes per node</span>
+<span class="c1">#SBATCH --partition=gpu</span>
+<span class="c1">#SBATCH -n 1                  #total nodes</span>
+<span class="c1">#SBATCH --ntasks-per-node=1   #total processes per node</span>
+<span class="c1">#SBATCH --gres=gpu:1          #total gpus</span>
 <span class="c1">#SBATCH --output=%j.out</span>
 <span class="c1">#SBATCH --error=%j.err</span>
 
@@ -460,6 +471,10 @@ mpirun<span class="w"> </span>exec.file
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="srun">
+<h3>Srun<a class="headerlink" href="#srun" title="Permalink to this headline">¶</a></h3>
+<p>Run a parallel job on cluster managed by Slurm. If necessary, srun will first create a resource allocation in which to run the parallel job.</p>
 </div>
 </div>
 </div>
