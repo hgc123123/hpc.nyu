@@ -35,5 +35,5 @@ Science Computing softwares
 .. toctree::
    :hidden:
 
-   ai/index
    module
+   ai/index
