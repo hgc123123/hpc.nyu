@@ -4,7 +4,7 @@ Login
 There are two clusters:
 
 
-.. image:: ../cluster.png
+.. image:: ./img/cluster.png
    :height: 100px
    :width: 200 px
    :scale: 50 %
