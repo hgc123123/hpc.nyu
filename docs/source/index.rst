@@ -12,5 +12,6 @@ HPC documentation
    
    Introduction
    Login
+   Slurm
    app/index
 
