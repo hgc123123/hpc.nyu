@@ -39,3 +39,4 @@ Science Computing softwares
 
    module
    ai/index
+   engineer/index
