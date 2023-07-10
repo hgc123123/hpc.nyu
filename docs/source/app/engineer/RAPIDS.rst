@@ -34,7 +34,9 @@ Test Data And Script
 
 .. code:: bash
 
-   Data:       /gpfsnyuc7/packagec7/modules/rapids/tmp.csv
+   Data: /gpfsnyuc7/packagec7/modules/rapids/tmp.csv
+   
+   #We only use cuDF and cuGraph here
 
 Run in CPU vs GPU
 =================
