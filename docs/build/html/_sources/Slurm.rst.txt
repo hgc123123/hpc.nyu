@@ -42,7 +42,7 @@ How to run jobs
 
 .. csv-table::
    :header: "Parameter", "Description"
-   :widths: 15, 50
+   :widths: 30, 50
 
    "-n [count]","total processes"
    "--ntasks-per-node=[count]","total processed per node"
@@ -61,4 +61,4 @@ How to run jobs
 Sbatch
 -------
 
-jiji
+
