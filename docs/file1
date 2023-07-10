@@ -1,8 +1,8 @@
 ./build/html/app/ai/index.html
 ./build/html/app/ai/pytorch.html
 ./build/html/app/ai/tensorflow.html
+./build/html/app/engineer/RAPIDS.html
 ./build/html/app/engineer/index.html
-./build/html/app/engineer/rapids.html
 ./build/html/app/index.html
 ./build/html/app/module.html
 ./build/html/genindex.html

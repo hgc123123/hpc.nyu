@@ -1,5 +1,5 @@
 ========
-Rapids
+RAPIDS
 ========
 
 RAPIDS provides unmatched speed with familiar APIs that match the most popular PyData libraries. 
