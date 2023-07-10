@@ -42,7 +42,7 @@ How to run jobs
 
 .. csv-table::
    :header: "Parameter", "Description"
-   :widths: 30, 50
+   :widths: 24, 50
 
    "-n [count]","total processes"
    "--ntasks-per-node=[count]","total processed per node"
@@ -62,3 +62,34 @@ Sbatch
 -------
 
 Sbatch submits a batch script to Slurm. The batch script can be given to sbatch through a file name on the command line. The batch script may contain options preceded with "#SBATCH" before any executable commands in the script. sbatch will stop processing further #SBATCH directives once the first non-comment non-whitespace line has been reached in the script.
+
+
+1.Create a file
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code:: bash
+
+   touch run.slurm
+
+2.Input batch scropt opentions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code:: bash
+
+   #!/bin/bash
+
+   #SBATCH --job-name=run
+   #SBATCH --partition=parallel
+   #SBATCH -N 2
+   #SBATCH --ntasks-per-node=1
+   #SBATCH --output=%j.out
+   #SBATCH --error=%j.err
+
+   mpirun exec.file
+
+3.Submit batch script
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. code:: bash
+
+   sbatch run.slurm
