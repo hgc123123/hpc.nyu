@@ -105,3 +105,12 @@ Run a parallel job on cluster managed by Slurm. If necessary, srun will first cr
 .. code:: bash
 
    srun --partition=parallel  --nodes=1 --ntasks=6 hostname
+
+Advice From Manager
+===================
+
+We hope that you can use sbatch to submit jobs, you just need to submit your job to backend, and then you can close you termimal freely.
+If you use srun to running job, when you terminal are closed, your job will be cancelled.
+
+
+`Slurm Website <http://zh-sphinx-doc.readthedocs.io/en/latest/markup/para.html>`_
