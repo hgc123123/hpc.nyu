@@ -107,7 +107,7 @@ Result
    :widths: 10,10
 
    "CPU","xx:xx:xx"
-   "GPU(1:P100)","00:11:34"
+   "GPU(1:P100)","00:01:34"
 
 RAPIDS References
 =================
