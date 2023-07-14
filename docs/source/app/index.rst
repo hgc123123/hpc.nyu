@@ -7,6 +7,7 @@ You can search needed application by :doc:`module`.
 Science Computing softwares
 
 - :ref:`second-table`
+- :ref:`third-table`
 
 **Engineer**
 
@@ -18,9 +19,21 @@ Science Computing softwares
    | :doc:`engineer/RAPIDS`                    | Open GPU Data Science                                                | 0.19           |
    +-------------------------------------------+----------------------------------------------------------------------+----------------+
 
-**AI software**
+**Atomic Molecule**
 
 .. _second-table:
+
+.. table:: Atomic Molecule software
+
+   +-------------------------------------------+----------------------------------------------------------------------+----------------+
+   | Software                                  | Description                                                          | Version        |
+   +===========================================+======================================================================+================+
+   | :doc:`atomic-molecule/Q-CHEM`             | GPU accelerated tensor computational framework                       | 1.6.0          |
+   +-------------------------------------------+----------------------------------------------------------------------+----------------+
+
+**AI software**
+
+.. _third-table:
 
 .. table:: AI software
 
@@ -38,3 +51,4 @@ Science Computing softwares
    module
    ai/index
    engineer/index
+   atomic-molecule/index
