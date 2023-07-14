@@ -46,6 +46,13 @@ q-chem.slurm
    module load q-chem/6.1
    qchem aimd_init_veloc.in
 
+Submit to cluster
+--------------------
+
+.. code:: bash
+
+   sbatch q-chem.slurm
+
 Q-CHEM Result
 --------------
 
