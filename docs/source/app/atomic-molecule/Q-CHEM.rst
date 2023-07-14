@@ -44,7 +44,7 @@ q-chem.slurm
    #SBATCH --error=%j.err
    
    module load q-chem/6.1
-   qchem aimd_init_veloc.in
+   qchem aimd_init_veloc.in aimd_init_veloc.out
 
 Submit to cluster
 --------------------
