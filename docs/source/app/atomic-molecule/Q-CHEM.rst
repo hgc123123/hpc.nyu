@@ -43,7 +43,6 @@ q-chem.slurm
    #SBATCH --output=%j.out
    #SBATCH --error=%j.err
    
-   cd q-chem
    module load q-chem/6.1
    qchem aimd_init_veloc.in
 
