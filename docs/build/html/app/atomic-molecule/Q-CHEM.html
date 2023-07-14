@@ -245,6 +245,33 @@
    Q-CHEM Module
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-data">
+   Test Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-run">
+   How to run
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#q-chem-slurm">
+     q-chem.slurm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#q-chem-result">
+     Q-CHEM Result
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q-chem-references">
+   Q-CHEM References
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -270,6 +297,33 @@
    Q-CHEM Module
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-data">
+   Test Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-run">
+   How to run
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#q-chem-slurm">
+     q-chem.slurm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#q-chem-result">
+     Q-CHEM Result
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q-chem-references">
+   Q-CHEM References
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -283,6 +337,7 @@
 <h1>Q-CHEM<a class="headerlink" href="#q-chem" title="Permalink to this headline">¶</a></h1>
 <p>Q-Chem is an ab initio quantum chemistry software package for fast and accurate simulations of molecular systems,
 including electronic and molecular structure, reactivities, properties, and structure.</p>
+<p><strong>Q-CHEM is commercial software, only authorized user can use it</strong></p>
 <div class="section" id="q-chem-module">
 <h2>Q-CHEM Module<a class="headerlink" href="#q-chem-module" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-given table">
@@ -305,8 +360,58 @@ including electronic and molecular structure, reactivities, properties, and stru
 <td><p>q-chem/6.0</p></td>
 <td><p>pudong(hpc.shanghai.nyu.edu)</p></td>
 </tr>
+<tr class="row-odd"><td><p>6.1</p></td>
+<td><p>source code</p></td>
+<td><p>q-chem/6.1</p></td>
+<td><p>pudong(hpc.shanghai.nyu.edu)</p></td>
+</tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="test-data">
+<h2>Test Data<a class="headerlink" href="#test-data" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>q-chem
+<span class="nb">cd</span><span class="w"> </span>q-chem
+cp<span class="w"> </span>-r<span class="w"> </span>/gpfsnyuc7/xspace/sungroup/software/qchem6cpu/samples/aimd/aimd_init_veloc.in<span class="w"> </span>./
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-run">
+<h2>How to run<a class="headerlink" href="#how-to-run" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="q-chem-slurm">
+<h3>q-chem.slurm<a class="headerlink" href="#q-chem-slurm" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=q-chem-test</span>
+<span class="c1">#SBATCH --partition=parallel</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+<span class="nb">cd</span><span class="w"> </span>q-chem
+module<span class="w"> </span>load<span class="w"> </span>q-chem/6.1
+qchem<span class="w"> </span>aimd_init_veloc.in
+</pre></div>
+</div>
+</div>
+<div class="section" id="q-chem-result">
+<h3>Q-CHEM Result<a class="headerlink" href="#q-chem-result" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Total<span class="w"> </span>job<span class="w"> </span>time:<span class="w">  </span><span class="m">1</span>.50s<span class="o">(</span>wall<span class="o">)</span>,<span class="w"> </span><span class="m">0</span>.23s<span class="o">(</span>cpu<span class="o">)</span>
+Fri<span class="w"> </span>Jul<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">14</span>:11:26<span class="w"> </span><span class="m">2023</span>
+
+<span class="w">       </span>*************************************************************
+<span class="w">       </span>*<span class="w">                                                           </span>*
+<span class="w">       </span>*<span class="w">  </span>Thank<span class="w"> </span>you<span class="w"> </span>very<span class="w"> </span>much<span class="w"> </span><span class="k">for</span><span class="w"> </span>using<span class="w"> </span>Q-Chem.<span class="w">  </span>Have<span class="w"> </span>a<span class="w"> </span>nice<span class="w"> </span>day.<span class="w">  </span>*
+<span class="w">       </span>*<span class="w">                                                           </span>*
+<span class="w">       </span>*************************************************************
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="q-chem-references">
+<h2>Q-CHEM References<a class="headerlink" href="#q-chem-references" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.q-chem.com/">Q-CHEM Website</a></p>
 </div>
 </div>
 
