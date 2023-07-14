@@ -17,8 +17,8 @@ Q-CHEM Module
    "6.0","source code","q-chem/6.0","pudong(hpc.shanghai.nyu.edu)"
    "6.1","source code","q-chem/6.1","pudong(hpc.shanghai.nyu.edu)"
 
-Test Data 
-===========
+Test Data Dir
+==============
 
 .. code:: bash
 
