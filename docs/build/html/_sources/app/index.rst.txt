@@ -11,7 +11,7 @@ Science Computing softwares
 
 **Engineer**
 
-.. table:: Engineer
+.. table:: Engineer Software
 
    +-------------------------------------------+----------------------------------------------------------------------+----------------+
    | software                                  | Description                                                          | version        |
@@ -22,6 +22,8 @@ Science Computing softwares
 **Atomic Molecule**
 
 .. _second-table:
+
+.. table:: Atomic Molecule Software
 
    +-------------------------------------------+----------------------------------------------------+----------------+
    | Software                                  | Description                                        | Version        |
