@@ -6,3 +6,4 @@ Atomic Molecule
    :maxdepth: 1
    
    Q-CHEM
+   amber

@@ -2,6 +2,7 @@
 ./build/html/app/ai/pytorch.html
 ./build/html/app/ai/tensorflow.html
 ./build/html/app/atomic-molecule/Q-CHEM.html
+./build/html/app/atomic-molecule/amber.html
 ./build/html/app/atomic-molecule/index.html
 ./build/html/app/engineer/RAPIDS.html
 ./build/html/app/engineer/index.html
