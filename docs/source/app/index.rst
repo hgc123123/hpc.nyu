@@ -30,7 +30,7 @@ Science Computing softwares
    +===========================================+====================================================+================+
    | :doc:`atomic-molecule/Q-CHEM`             | Electronic Structure Program                       | 6.0, 6.1       |
    +-------------------------------------------+----------------------------------------------------+----------------+
-   | :doc:`atomic-molecule/amber `             | A suite of biomolecular simulation programs        | 18             |
+   | :doc:`atomic-molecule/amber`              | A suite of biomolecular simulation programs        | 18             |
    +-------------------------------------------+----------------------------------------------------+----------------+
 
 **AI software**
