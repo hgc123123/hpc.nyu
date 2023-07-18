@@ -10,6 +10,6 @@ Amber Module
 
 .. csv-table::
    :header: "Version", "How to buid","Module","Cluster"
-   :widths: 8,10,20,25
+   :widths: 4,10,25,20
 
    "18","source code","amber/18-openmpi-5.1.0-gcc-8.5.0","hpcshc(hpclogin.shanghai.nyu.edu)"
