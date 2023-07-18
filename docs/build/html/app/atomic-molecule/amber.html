@@ -391,7 +391,8 @@ cp<span class="w"> </span>-r<span class="w"> </span>/gpfsnyu/spack/opt/spack/lin
 
 module<span class="w"> </span>load<span class="w"> </span>openmpi/main-gcc-8.5.0<span class="w">  </span>amber/18-openmpi-5.1.0-gcc-8.5.0
 <span class="nb">cd</span><span class="w"> </span>~/amber
-mpirun<span class="w"> </span>-np<span class="w"> </span><span class="m">2</span><span class="w"> </span>pmemd.MPI<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>bench.gb_mb<span class="w"> </span>-o<span class="w"> </span>mdout<span class="w"> </span>-p<span class="w"> </span>prmtop<span class="w"> </span>-c<span class="w"> </span>inpcrd
+<span class="nb">ulimit</span><span class="w"> </span>-l<span class="w"> </span>unlimited
+mpirun<span class="w"> </span>-np<span class="w"> </span><span class="m">36</span><span class="w"> </span>pmemd.MPI<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>bench.gb_mb<span class="w"> </span>-o<span class="w"> </span>mdout<span class="w"> </span>-p<span class="w"> </span>prmtop<span class="w"> </span>-c<span class="w"> </span>inpcrd
 </pre></div>
 </div>
 <p><strong>sbatch amber.slurm</strong></p>

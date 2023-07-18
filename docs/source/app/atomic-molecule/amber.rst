@@ -44,7 +44,8 @@ amber.slurm
    
    module load openmpi/main-gcc-8.5.0  amber/18-openmpi-5.1.0-gcc-8.5.0 
    cd ~/amber
-   mpirun -np 2 pmemd.MPI -O -i bench.gb_mb -o mdout -p prmtop -c inpcrd
+   ulimit -l unlimited
+   mpirun -np 36 pmemd.MPI -O -i bench.gb_mb -o mdout -p prmtop -c inpcrd
 
 **sbatch amber.slurm**
 
