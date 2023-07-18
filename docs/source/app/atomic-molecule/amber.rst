@@ -12,7 +12,7 @@ Amber Module
    :header: "Version", "How to buid","Module","Cluster"
    :widths: 4,10,25,20
 
-   "18","source code","amber/18-openmpi-5.1.0-gcc-8.5.0","hpcshc(hpclogin.shanghai.nyu.edu)"
+   "18","source code","amber/18-openmpi-5.1.0-gcc-8.5.0","nyushc(hpclogin.shanghai.nyu.edu)"
 
 Amber running example
 =====================
