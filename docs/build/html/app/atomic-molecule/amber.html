@@ -250,6 +250,33 @@
    Amber Module
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#amber-running-example">
+   Amber running example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-run-amber">
+   How to run amber
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amber-slurm">
+     amber.slurm
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#amber-running-result">
+   Amber Running Result
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#amber-references">
+   Amber References
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -273,6 +300,33 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#amber-module">
    Amber Module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#amber-running-example">
+   Amber running example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-run-amber">
+   How to run amber
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amber-slurm">
+     amber.slurm
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#amber-running-result">
+   Amber Running Result
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#amber-references">
+   Amber References
   </a>
  </li>
 </ul>
@@ -312,6 +366,62 @@ It is a set of molecular mechanical force fields for the simulation of biomolecu
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="amber-running-example">
+<h2>Amber running example<a class="headerlink" href="#amber-running-example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>~/amber
+<span class="nb">cd</span><span class="w"> </span>~/amber
+cp<span class="w"> </span>-r<span class="w"> </span>/gpfsnyu/spack/opt/spack/linux-rhel8-icelake/contribute/amber18/benchmarks/gb_mb<span class="w"> </span>./
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-run-amber">
+<h2>How to run amber<a class="headerlink" href="#how-to-run-amber" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="amber-slurm">
+<h3>amber.slurm<a class="headerlink" href="#amber-slurm" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=amber</span>
+<span class="c1">#SBATCH --partition=parallel</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH --ntasks-per-node=2</span>
+<span class="c1">#SBATCH --output=%j.out</span>
+<span class="c1">#SBATCH --error=%j.err</span>
+
+module<span class="w"> </span>load<span class="w"> </span>openmpi/main-gcc-8.5.0<span class="w">  </span>amber/18-openmpi-5.1.0-gcc-8.5.0
+<span class="nb">cd</span><span class="w"> </span>~/amber
+mpirun<span class="w"> </span>pmemd.MPI<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>bench.gb_mb<span class="w"> </span>-o<span class="w"> </span>mdout<span class="w"> </span>-p<span class="w"> </span>prmtop<span class="w"> </span>-c<span class="w"> </span>inpcrd
+</pre></div>
+</div>
+<p><strong>sbatch amber.slurm</strong></p>
+</div>
+</div>
+<div class="section" id="amber-running-result">
+<h2>Amber Running Result<a class="headerlink" href="#amber-running-result" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="p">|</span><span class="w">  </span>Final<span class="w"> </span>Performance<span class="w"> </span>Info:
+<span class="p">|</span><span class="w">     </span>-----------------------------------------------------
+<span class="p">|</span><span class="w">     </span>Average<span class="w"> </span>timings<span class="w"> </span><span class="k">for</span><span class="w"> </span>last<span class="w">     </span><span class="m">800</span><span class="w"> </span>steps:
+<span class="p">|</span><span class="w">     </span>Elapsed<span class="o">(</span>s<span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w">       </span><span class="m">2</span>.41<span class="w"> </span>Per<span class="w"> </span>Step<span class="o">(</span>ms<span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w">       </span><span class="m">3</span>.01
+<span class="p">|</span><span class="w">         </span>ns/day<span class="w"> </span><span class="o">=</span><span class="w">      </span><span class="m">28</span>.70<span class="w">   </span>seconds/ns<span class="w"> </span><span class="o">=</span><span class="w">    </span><span class="m">3010</span>.00
+<span class="p">|</span>
+<span class="p">|</span><span class="w">     </span>Average<span class="w"> </span>timings<span class="w"> </span><span class="k">for</span><span class="w"> </span>all<span class="w"> </span>steps:
+<span class="p">|</span><span class="w">     </span>Elapsed<span class="o">(</span>s<span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w">       </span><span class="m">3</span>.07<span class="w"> </span>Per<span class="w"> </span>Step<span class="o">(</span>ms<span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w">       </span><span class="m">3</span>.07
+<span class="p">|</span><span class="w">         </span>ns/day<span class="w"> </span><span class="o">=</span><span class="w">      </span><span class="m">28</span>.12<span class="w">   </span>seconds/ns<span class="w"> </span><span class="o">=</span><span class="w">    </span><span class="m">3072</span>.43
+<span class="p">|</span><span class="w">     </span>-----------------------------------------------------
+
+<span class="p">|</span><span class="w">  </span>Master<span class="w"> </span>Setup<span class="w"> </span>CPU<span class="w"> </span>time:<span class="w">            </span><span class="m">0</span>.53<span class="w"> </span>seconds
+<span class="p">|</span><span class="w">  </span>Master<span class="w"> </span>NonSetup<span class="w"> </span>CPU<span class="w"> </span>time:<span class="w">         </span><span class="m">3</span>.06<span class="w"> </span>seconds
+<span class="p">|</span><span class="w">  </span>Master<span class="w"> </span>Total<span class="w"> </span>CPU<span class="w"> </span>time:<span class="w">            </span><span class="m">3</span>.59<span class="w"> </span>seconds<span class="w">     </span><span class="m">0</span>.00<span class="w"> </span>hours
+
+<span class="p">|</span><span class="w">  </span>Master<span class="w"> </span>Setup<span class="w"> </span>wall<span class="w"> </span>time:<span class="w">           </span><span class="m">2</span><span class="w">    </span>seconds
+<span class="p">|</span><span class="w">  </span>Master<span class="w"> </span>NonSetup<span class="w"> </span>wall<span class="w"> </span>time:<span class="w">        </span><span class="m">3</span><span class="w">    </span>seconds
+<span class="p">|</span><span class="w">  </span>Master<span class="w"> </span>Total<span class="w"> </span>wall<span class="w"> </span>time:<span class="w">           </span><span class="m">5</span><span class="w">    </span>seconds<span class="w">     </span><span class="m">0</span>.00<span class="w"> </span>hours
+</pre></div>
+</div>
+</div>
+<div class="section" id="amber-references">
+<h2>Amber References<a class="headerlink" href="#amber-references" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://ambermd.org//">Amber Website</a></p>
 </div>
 </div>
 
