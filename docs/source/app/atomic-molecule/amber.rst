@@ -37,14 +37,14 @@ amber.slurm
    #SBATCH --job-name=amber
    #SBATCH --partition=parallel
    #SBATCH -N 1
-   #SBATCH --ntasks-per-node=2
+   #SBATCH --ntasks-per-node=36
    #SBATCH --nodelist=compute[142]
    #SBATCH --output=%j.out
    #SBATCH --error=%j.err
    
    module load openmpi/main-gcc-8.5.0  amber/18-openmpi-5.1.0-gcc-8.5.0 
    cd ~/amber
-   mpirun pmemd.MPI -O -i bench.gb_mb -o mdout -p prmtop -c inpcrd
+   mpirun -np 2 pmemd.MPI -O -i bench.gb_mb -o mdout -p prmtop -c inpcrd
 
 **sbatch amber.slurm**
 
