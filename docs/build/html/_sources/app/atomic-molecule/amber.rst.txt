@@ -38,6 +38,7 @@ amber.slurm
    #SBATCH --partition=parallel
    #SBATCH -N 1
    #SBATCH --ntasks-per-node=2
+   #SBATCH --nodelist=compute[142]
    #SBATCH --output=%j.out
    #SBATCH --error=%j.err
    
