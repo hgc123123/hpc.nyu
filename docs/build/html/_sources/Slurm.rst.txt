@@ -71,7 +71,7 @@ Sbatch submits a batch script to Slurm. The batch script can be given to sbatch 
 
    touch run.slurm
 
-2.Input batch scropt opentions
+2.Script with GPU resources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: bash
