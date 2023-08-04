@@ -78,7 +78,7 @@ Sbatch submits a batch script to Slurm. The batch script can be given to sbatch 
 
    #!/bin/bash
 
-   #SBATCH --job-name=run
+   #SBATCH --job-name=gpu
    #SBATCH --partition=gpu
    #SBATCH -n 1                  #total nodes
    #SBATCH --ntasks-per-node=1   #total processes per node
@@ -87,6 +87,22 @@ Sbatch submits a batch script to Slurm. The batch script can be given to sbatch 
    #SBATCH --error=%j.err
 
    mpirun exec.file
+
+``If you want to run software with multiple node``
+
+.. code:: bash
+
+   #!/bin/bash
+
+   #SBATCH --job-name=mpi
+   #SBATCH --partition=parallel
+   #SBATCH -N 2                  #total nodes
+   #SBATCH --exclusive
+   #SBATCH --output=%j.out
+   #SBATCH --error=%j.err
+
+   mpirun exec.file
+
 
 3.Submit batch script
 ^^^^^^^^^^^^^^^^^^^^^^
