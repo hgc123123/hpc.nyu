@@ -135,15 +135,15 @@ If you use srun to running job, when you terminal are closed, your job will be c
 Steps to submit job
 ^^^^^^^^^^^^^^^^^^^
 
-``Firstly``
-Enter Computer Node
+``Firstly, ``
+enter computer node
 
 .. code:: bash
 
    srun -p debug -N 1 -n 1 --time=10:00:00 --pty /bin/bash
 
-``Secondly``
-Edit your script with some resources
+``Secondly, ``
+edit your script with some resources
 
 .. code:: bash
 
@@ -160,8 +160,8 @@ Edit your script with some resources
 
    mpirun exec.file
 
-``Thirdly``
-Submit job to cluster
+``Thirdly, ``
+submit job to cluster
 
 .. code:: bash
 
