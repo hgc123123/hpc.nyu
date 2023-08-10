@@ -565,28 +565,27 @@ mpirun<span class="w"> </span>exec.file
 <h2>Advice From Manager<a class="headerlink" href="#advice-from-manager" title="Permalink to this headline">¶</a></h2>
 <p>We hope that you can use sbatch to submit jobs, you just need to submit your job to backend, and then you can close you termimal freely.
 If you use srun to running job, when you terminal are closed, your job will be cancelled.</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a>Firstly, ``
+<p><code class="docutils literal notranslate"><span class="pre">Firstly,</span></code>
 enter computer node</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>srun<span class="w"> </span>-p<span class="w"> </span>debug<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span>--time<span class="o">=</span><span class="m">10</span>:00:00<span class="w"> </span>--pty<span class="w"> </span>/bin/bash
 </pre></div>
 </div>
-<p><a href="#id3"><span class="problematic" id="id4">``</span></a>Secondly, ``
+<p><code class="docutils literal notranslate"><span class="pre">Secondly,</span></code>
 edit your script with some resources</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>----run.slurm----
-<span class="c1">#!/bin/bash</span>
-
-<span class="c1">#SBATCH --job-name=mpi</span>
-<span class="c1">#SBATCH --partition=parallel</span>
-<span class="c1">#SBATCH -N 1</span>
-<span class="c1">#SBATCH --ntasks-per-node=32</span>
-<span class="c1">#SBATCH --time=10:00:00</span>
-<span class="c1">#SBATCH --output=%j.out</span>
-<span class="c1">#SBATCH --error=%j.err</span>
-
-mpirun<span class="w"> </span>exec.file
-</pre></div>
-</div>
-<p><a href="#id5"><span class="problematic" id="id6">``</span></a>Thirdly, ``
+<p>—-run.slurm—-
+.. code:: bash</p>
+<blockquote>
+<div><p>#!/bin/bash</p>
+<p>#SBATCH –job-name=mpi
+#SBATCH –partition=parallel
+#SBATCH -N 1
+#SBATCH –ntasks-per-node=32
+#SBATCH –time=10:00:00
+#SBATCH –output=%j.out
+#SBATCH –error=%j.err</p>
+<p>mpirun exec.file</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">Thirdly,</span></code>
 submit job to cluster</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>run.slurm
 </pre></div>

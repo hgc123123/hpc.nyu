@@ -135,19 +135,19 @@ If you use srun to running job, when you terminal are closed, your job will be c
 Steps to submit job
 ^^^^^^^^^^^^^^^^^^^
 
-``Firstly, ``
+``Firstly,``
 enter computer node
 
 .. code:: bash
 
    srun -p debug -N 1 -n 1 --time=10:00:00 --pty /bin/bash
 
-``Secondly, ``
+``Secondly,``
 edit your script with some resources
 
+----run.slurm----
 .. code:: bash
 
-   ----run.slurm----
    #!/bin/bash
 
    #SBATCH --job-name=mpi
@@ -160,7 +160,7 @@ edit your script with some resources
 
    mpirun exec.file
 
-``Thirdly, ``
+``Thirdly,``
 submit job to cluster
 
 .. code:: bash
