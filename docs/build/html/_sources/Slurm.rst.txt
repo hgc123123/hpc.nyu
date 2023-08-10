@@ -71,8 +71,10 @@ Sbatch submits a batch script to Slurm. The batch script can be given to sbatch 
 
    touch run.slurm
 
-2.Script with GPU resources
+2.Applied resources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``If you want to run software with GPU node``
 
 .. code:: bash
 
