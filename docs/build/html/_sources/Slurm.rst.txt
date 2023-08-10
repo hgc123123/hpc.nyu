@@ -85,6 +85,7 @@ Sbatch submits a batch script to Slurm. The batch script can be given to sbatch 
    #SBATCH -n 1                  #total nodes
    #SBATCH --ntasks-per-node=1   #total processes per node
    #SBATCH --gres=gpu:1          #total gpus
+   #SBATCH --time=10:00:00
    #SBATCH --output=%j.out
    #SBATCH --error=%j.err
 
@@ -100,6 +101,7 @@ Sbatch submits a batch script to Slurm. The batch script can be given to sbatch 
    #SBATCH --partition=parallel
    #SBATCH -N 2                  #total nodes
    #SBATCH --exclusive
+   #SBATCH --time=10:00:00
    #SBATCH --output=%j.out
    #SBATCH --error=%j.err
 

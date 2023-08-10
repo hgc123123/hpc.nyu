@@ -523,6 +523,7 @@
 <span class="c1">#SBATCH -n 1                  #total nodes</span>
 <span class="c1">#SBATCH --ntasks-per-node=1   #total processes per node</span>
 <span class="c1">#SBATCH --gres=gpu:1          #total gpus</span>
+<span class="c1">#SBATCH --time=10:00:00</span>
 <span class="c1">#SBATCH --output=%j.out</span>
 <span class="c1">#SBATCH --error=%j.err</span>
 
@@ -536,6 +537,7 @@ mpirun<span class="w"> </span>exec.file
 <span class="c1">#SBATCH --partition=parallel</span>
 <span class="c1">#SBATCH -N 2                  #total nodes</span>
 <span class="c1">#SBATCH --exclusive</span>
+<span class="c1">#SBATCH --time=10:00:00</span>
 <span class="c1">#SBATCH --output=%j.out</span>
 <span class="c1">#SBATCH --error=%j.err</span>
 
