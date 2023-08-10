@@ -133,7 +133,7 @@ We hope that you can use sbatch to submit jobs, you just need to submit your job
 If you use srun to running job, when you terminal are closed, your job will be cancelled.
 
 Steps to submit job
-^^^^^^^^^^^^^^^^^^^
+--------------------
 
 ``Firstly,``
 enter computer node
