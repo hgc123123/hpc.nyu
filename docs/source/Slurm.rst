@@ -132,6 +132,37 @@ Advice From Manager
 We hope that you can use sbatch to submit jobs, you just need to submit your job to backend, and then you can close you termimal freely.
 If you use srun to running job, when you terminal are closed, your job will be cancelled.
 
+``Firstly``
+Enter Computer Node
+
+.. code:: bash
+
+   srun -p debug -N 1 -n 1 --time=10:00:00 --pty /bin/bash
+
+``Secondly``
+Choose some resources for your job
+
+.. code:: bash
+
+   ----run.slurm----
+   #!/bin/bash
+
+   #SBATCH --job-name=mpi
+   #SBATCH --partition=parallel
+   #SBATCH -N 1                  
+   #SBATCH --ntasks-per-node=32
+   #SBATCH --time=10:00:00
+   #SBATCH --output=%j.out
+   #SBATCH --error=%j.err
+
+   mpirun exec.file
+
+``Thirdly``
+Submit job to cluster
+
+.. code:: bash
+
+   sbatch run.slurm
 
 References
 ==========
