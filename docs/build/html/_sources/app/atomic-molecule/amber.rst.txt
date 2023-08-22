@@ -21,7 +21,7 @@ Amber running example
 
    mkdir ~/amber
    cd ~/amber
-   cp -r /gpfsnyu/spack/opt/spack/linux-rhel8-icelake/contribute/Amber18/benchmarks/gb_mb ./
+   cp -r /gpfsnyu/spack/opt/spack/linux-rhel8-icelake/contribute/Amber18/benchmarks/gb_mb/* ./
 
 
 How to run amber
